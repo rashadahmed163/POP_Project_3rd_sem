@@ -1,54 +1,55 @@
-import java.awt. *;
-import java.awt. event.*;
+import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
 class QuestionSeries{
-static String info ="Java Online Test Week  \n \nINSTRUCTIONS:\nThere are 25 questions in this test and 10 minutes to complete them all.\nThe finish button is highlighted in green when you reach the end of the test. \nClicking the finish button will display the results with the correct answers marked in light red.  \n \nThe timecounter  begins when you click on the 'start' button \n \nBest of luck!\n";
+	protected static String info ="Java Online Test Week  \n \nINSTRUCTIONS:\nThere are 25 questions in this test and 10 minutes to complete them all.\nThe finish button is highlighted in green when you reach the end of the test. \nClicking the finish button will display the results with the correct answers marked in light red.  \n \nThe timecounter  begins when you click on the 'start' button \n \nBest of luck!\n";
 
-static String []question ={"Question 1:\nWhich 2 months have EQUINOX?",
-"Question 2:\nCONDENSATION is the reverse process of?",
-"Question 3: \nWhich country ranks second in terms of largest land area?",
-"Question 4:\nWhich river carries maximum amount of water in the sea?",
-"Question 5:\nWhere is the permanent secretariat of SAARC located?",
-"Question 6:\nWhen is the WORLD ENVIRONMENT DAY celebrated?",
-"Question 7:\nIn which year was UNO formed?",
-"Question 8:\nWho is the author of Harry Potter?",
-"Question 9:\nIn which ocean is Hawaii situated?",
-"Question 10:\nHow many legs does a butterfly has?",
-"Question 11:\nWhich is the most common element on earth?",
-"Question 12:\nHow many tentacles does an octopus have?",
-"Question 13:\nWhich planet has rings around it?",
-"Question 14:\nWhat is the main use of Quinine?",
-"Question 15:\nHow many is a Baker's dozen?",
-"Question 16:\nWhich one of the following is not a primary colour?",
-"Question 17:\nIn which country did Sherpa's originate?",
-"Question 18:\nWhich is the largest gland in human body?",
-"Question 19:\nWhich is the fastest mammal on earth?",
-"Question 20:\nWhich sport is called the Sport of Kings?",
-"Question 21:\nHow many years you have been married for a diamond anniversary?",
-"Question 22:\nSumo Wrestling originated in which country?",
-"Question 23:\nWhich element's chemical symbol is Pb?",
+	protected static String []question ={"Question 1:\nWhich 2 months have EQUINOX?",
+	"Question 2:\nCONDENSATION is the reverse process of?",
+	"Question 3: \nWhich country ranks second in terms of largest land area?",
+	"Question 4:\nWhich river carries maximum amount of water in the sea?",
+	"Question 5:\nWhere is the permanent secretariat of SAARC located?",
+	"Question 6:\nWhen is the WORLD ENVIRONMENT DAY celebrated?",
+	"Question 7:\nIn which year was UNO formed?",
+	"Question 8:\nWho is the author of Harry Potter?",
+	"Question 9:\nIn which ocean is Hawaii situated?",
+	"Question 10:\nHow many legs does a butterfly has?",
+	"Question 11:\nWhich is the most common element on earth?",
+	"Question 12:\nHow many tentacles does an octopus have?",
+	"Question 13:\nWhich planet has rings around it?",
+	"Question 14:\nWhat is the main use of Quinine?",
+	"Question 15:\nHow many is a Baker's dozen?",
+	"Question 16:\nWhich one of the following is not a primary colour?",
+	"Question 17:\nIn which country did Sherpa's originate?",
+	"Question 18:\nWhich is the largest gland in human body?",
+	"Question 19:\nWhich is the fastest mammal on earth?",
+	"Question 20:\nWhich sport is called the Sport of Kings?",
+	"Question 21:\nHow many years you have been married for a diamond anniversary?",
+	"Question 22:\nSumo Wrestling originated in which country?",
+	"Question 23:\nWhich element's chemical symbol is Pb?",
 
-"Question 24:\nHow many years are there in a millenium?",
-"Question 25:\nWhich is the largest coffee growing country in the world?"
-};
+	"Question 24:\nHow many years are there in a millenium?",
+	"Question 25:\nWhich is the largest coffee growing country in the world?"
+	};
 
 
-static String [][]answers ={{"JUNE\n","MARCH\n","SEPTEMBER\n","OCTOBER\n"},{"Melting\n"," \nEvaporation","Freezing\n"," \nSolidifying\n"},{" \nChina\n","India\n","Canada\n","Russia\n"},{" \nAmazon","Nile\n"," \nGanga\n"," \nThames\n"},{" \nKathmandu\n"," \nWashington\n"," \nToronto\n"," \nLondon\n"},{" \n5 july\n"," \n5 may\n"," \n4 may\n","5 june\n"},{" \n1944\n"," \n1946\n"," \n1947\n"," \n1945\n"},{" \nCharles Dickens\n"," \nEnid Blyton\n"," \nJ.K Rowling\n"," \nJane Austen\n"},{" \nIndian\n"," \nArctic\n"," \nAntarctic\n"," \nPacific\n"},{" \n8\n"," \n10\n"," \n6\n"," \n4\n"},{" \nOxygen\n"," \nMagnesium\n"," \nSilicon\n"," \nHydrogen\n"},{" \n8\n"," \n10\n"," \n12\n"," \n14\n"},{" \nSaturn\n"," \nNeptune\n"," \nUranus\n"," \nJupiter\n"},{"prevent fever\n"," \nprevent small pox\n"," \nprevent malaria\n"," \nprevent chicken pox\n"},{" \n11\n"," \n12\n"," \n10\n"," \n13\n"},{" \nred\n"," \nblue\n"," \nyellow\n"," \ngreen\n"},{" \nchina\n"," \nnepal\n"," \nbhutan\n"," \nIndia\n"},{" \nThyroid Gland\n"," \nKidney\n"," \nPituitary\n"," \nLiver\n"},{" \nElephant\n"," \nTiger\n"," \nCheetah\n"," \nHumans\n"},{" \nPolo\n"," \nHorse Racing\n"," \nCricket\n"," \nIce Hockey\n"},{" \n50\n"," \n60\n"," \n75\n"," \n100\n"},{"Argentina\n"," \nThailand\n"," \nJapan\n"," \nChina\n"},{" Iron\n"," Zinc\n"," Lead\n"," Potassium\n"},{" \n100\n"," \n1000\n"," \n10,000\n"," \n10\n"},{"Brazil\n","Sri Lanka\n","Zambia\n"," \nIndia\n"} };
+	protected static String [][]answers ={{"JUNE\n","MARCH\n","SEPTEMBER\n","OCTOBER\n"},{"Melting\n"," \nEvaporation","Freezing\n"," \nSolidifying\n"},{" \nChina\n","India\n","Canada\n","Russia\n"},{" \nAmazon","Nile\n"," \nGanga\n"," \nThames\n"},{" \nKathmandu\n"," \nWashington\n"," \nToronto\n"," \nLondon\n"},{" \n5 july\n"," \n5 may\n"," \n4 may\n","5 june\n"},{" \n1944\n"," \n1946\n"," \n1947\n"," \n1945\n"},{" \nCharles Dickens\n"," \nEnid Blyton\n"," \nJ.K Rowling\n"," \nJane Austen\n"},{" \nIndian\n"," \nArctic\n"," \nAntarctic\n"," \nPacific\n"},{" \n8\n"," \n10\n"," \n6\n"," \n4\n"},{" \nOxygen\n"," \nMagnesium\n"," \nSilicon\n"," \nHydrogen\n"},{" \n8\n"," \n10\n"," \n12\n"," \n14\n"},{" \nSaturn\n"," \nNeptune\n"," \nUranus\n"," \nJupiter\n"},{"prevent fever\n"," \nprevent small pox\n"," \nprevent malaria\n"," \nprevent chicken pox\n"},{" \n11\n"," \n12\n"," \n10\n"," \n13\n"},{" \nred\n"," \nblue\n"," \nyellow\n"," \ngreen\n"},{" \nchina\n"," \nnepal\n"," \nbhutan\n"," \nIndia\n"},{" \nThyroid Gland\n"," \nKidney\n"," \nPituitary\n"," \nLiver\n"},{" \nElephant\n"," \nTiger\n"," \nCheetah\n"," \nHumans\n"},{" \nPolo\n"," \nHorse Racing\n"," \nCricket\n"," \nIce Hockey\n"},{" \n50\n"," \n60\n"," \n75\n"," \n100\n"},{"Argentina\n"," \nThailand\n"," \nJapan\n"," \nChina\n"},{" Iron\n"," Zinc\n"," Lead\n"," Potassium\n"},{" \n100\n"," \n1000\n"," \n10,000\n"," \n10\n"},{"Brazil\n","Sri Lanka\n","Zambia\n"," \nIndia\n"} };
 
-static int []n = {2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
-static String []choice= {"23","2","3","1","1","4","4","3","4","3","4","1","1","3","4","4","2","4","3","2","2","3","3","2","1"};
-static int tally = choice.length;
-static String testtitle="Java Programming Online Test";
-static int timeLimit =10;
-static int passMark = 33;
+	protected static int []n = {2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+	protected static String []choice= {"23","2","3","1","1","4","4","3","4","3","4","1","1","3","4","4","2","4","3","2","2","3","3","2","1"};
+	protected static int tally = choice.length;
+	protected static String testtitle="Java Programming Online Test";
+	protected static int timeLimit = 10;
+	protected static int passMark = 33;
 }
 
 /* OnlineTest class */
 
 public class OnlineTest extends JFrame{
-    static String studentname ="";
-    static int TOTAL=0;
+	private static final long serialVersionUID = 1L;
+    private static String studentname ="";
+    private static int TOTAL=0;
 
 	static {
 	try{
@@ -60,32 +61,41 @@ public class OnlineTest extends JFrame{
 	}catch(NullPointerException e){ System.exit(0); }
 	}	
 
-    	int seconds, minutes;
-    	int quesnum, itemCheck, mark; 
-	final String TESTTITLE = QuestionSeries.testtitle;
-    	final int TIMELIMIT = QuestionSeries.timeLimit;
-    	final int PASS = QuestionSeries.passMark;
-    	String []answers = new String[TOTAL];
-	JButton []choice_button = new JButton[6];
-	JTextArea answerboxes[] = new JTextArea[4];
-	JCheckBox []boxes = new JCheckBox[4];
-    	JTextPane pane = new JTextPane();
-	JLabel student, choose, message, timecounter, testresult;
-    	boolean start_test, check_answer, allowRestart, finishtest;
-	Northwindow panelNorth = new Northwindow();
-	Southwindow panelSouth = new Southwindow();
-	Centerwindow panelCenter = new Centerwindow();
+    private int seconds, minutes;
+    private int quesnum, itemCheck, mark; 
+	private final String TESTTITLE = QuestionSeries.testtitle;
+    private final int TIMELIMIT = QuestionSeries.timeLimit;
+    private final int PASS = QuestionSeries.passMark;
+    private String []answers = new String[TOTAL];
+	private JButton []choice_button = new JButton[6];
+	private JTextArea answerboxes[] = new JTextArea[4];
+	private JCheckBox []boxes = new JCheckBox[4];
+    private JTextPane pane = new JTextPane();
+	private JLabel student, choose, message, timecounter, testresult;
+    private boolean start_test, check_answer, allowRestart, finishtest;
+	private Northwindow panelNorth = new Northwindow();
+	private Southwindow panelSouth = new Southwindow();
+	private Centerwindow panelCenter = new Centerwindow();
 
 /*  OnlineTest Constructor */
 	protected OnlineTest(){
-        for (int i=0; i<TOTAL; i++) answers[i] ="";
+        for (int i=0; i<TOTAL; i++){
+			answers[i] = "";
+		}
+		 
 		getContentPane().setLayout(new BorderLayout() );
 		getContentPane().add("North", panelNorth);
 		getContentPane().add("South", panelSouth);
 		getContentPane().add("Center", panelCenter);
 		int width = 0, height=0; 
-	        if(java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth()<799){width=		640; 		height=460; }
-	        else {width=720; height=540; }
+	    if(java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth()<799){
+			width=		640;
+			height=460; 
+		}
+	    else{
+			width=720;
+			height=540; 
+		}
 		setSize(width,height);
 		Dimension dim = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 		setLocation((dim.width-width)/2, (dim.height-height)/2);
@@ -97,13 +107,15 @@ public class OnlineTest extends JFrame{
 
 class Northwindow extends JPanel{
 
+	private static final long serialVersionUID = 1L;
+
 /**
 **  Northwindow constructor 
 **/
     public Northwindow(){
 		setLayout(new GridLayout(2,2));
 		setBackground(new Color(230, 230, 255));
-		student = new JLabel("\t Welcome : "+studentname+" to the Online Java Test");
+		student = new JLabel("\t Welcome : " + studentname + " to the Online Java Test");
 		student.setFont(new Font("",Font.BOLD,16) );
 		message = new JLabel();
 		message.setForeground(Color.blue);
@@ -119,14 +131,15 @@ class Northwindow extends JPanel{
 **  Southwindow class
 **/
 class Southwindow extends JPanel{
+	private static final long serialVersionUID = 1L;
 	public Southwindow(){
 		String []key = {"","start:","next:","finish:","check next:","check previous:"};
 			for(int i=0; i<choice_button.length; i++)
-                   {
+            {
 				choice_button[i] = new JButton(key[i]);
 				choice_button[i].addActionListener(new ActionHandler() );
 				if(i !=0)add(choice_button[i]);
-			  }
+			}
         setBorder(BorderFactory.createEtchedBorder() );
 	}
 }
@@ -135,6 +148,7 @@ class Southwindow extends JPanel{
 **  Centerwindow class 
 **/
 class Centerwindow extends JPanel{
+	private static final long serialVersionUID = 1L;
 
 	public Centerwindow(){
 		setLayout(new GridLayout(1,2) );
@@ -361,21 +375,22 @@ class Timer extends Thread implements Runnable{
 		if(temp/TOTAL*100 >=PASS) testresult.setText("  Well done "+studentname.substring(0,studentname.indexOf(' ') )+", you passed");
 		else testresult.setText("  Better luck next time "+studentname.substring(0,studentname.indexOf(' ') ) );
 		student.setText(" Final score for "+studentname+":  "+mark+" out of "+TOTAL+":  "+df.format(temp/TOTAL*100)+"%");
-		new Resultwindow().show();
+		new Resultwindow().setVisible(true);
 	}
 }
 
 /* Resultwindow class */
 
 class Resultwindow extends JFrame{
-		Resultwindow() {
-      	super( studentname+" results: " +(mark*100/TOTAL >=PASS?"PASS":"FAIL") );
-  		Container cont = getContentPane();
+	private static final long serialVersionUID = 1L;
+	public Resultwindow() {
+		super( studentname+" results: " +(mark*100/TOTAL >=PASS?"PASS":"FAIL") );
+		Container cont = getContentPane();
 		cont.setLayout(new GridLayout(TOTAL/2+3,5,2,5) );
 		cont.setBackground(new Color(255,220,255) );
 		cont.add(new JLabel("  "+"Marks:    "+mark+"/"+TOTAL+": "+"Percentage:  "+(mark*100/TOTAL)+"%") );
-           for(int i=0; i<3; i++)cont.add(new JLabel() );
-      	  String temp[] = new String[TOTAL];
+			for(int i=0; i<3; i++)cont.add(new JLabel() );
+			String temp[] = new String[TOTAL];
 			for(int i=0; i<TOTAL; i++){
 				if(QuestionSeries.choice[i].equals(answers[i])) temp[i]="correct";
 				else temp[i]="wrong";
